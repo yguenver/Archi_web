@@ -1,0 +1,7 @@
+# Ignorer tous les fichier pyc
+*.pyc
+# Ignorer tous les fichier ~
+*~
+# Ignorer la base de donnée
+*.sqlite3
+
