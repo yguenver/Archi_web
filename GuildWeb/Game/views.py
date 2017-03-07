@@ -10,8 +10,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .models import *
-from .forms import *
+from .models import User
+from .forms import ConnexionForm, InscriptionForm
 
 def ConnexionView(request):
 	error = False
@@ -39,8 +39,6 @@ def InscriptionView(request):
 		form = InscriptionForm(request.POST)
 		if form.is_valid():
 			username = form.cleaned_data["pseudo"]
-			#name = form.cleaned_data["prenom"]
-			#lastname = form.cleaned_data["nom"]
 			email = form.cleaned_data["email"]
 			password = form.cleaned_data["password"]
 			passwordconf = form.cleaned_data["passwordconf"]
@@ -48,7 +46,7 @@ def InscriptionView(request):
 				error = True
 			else:
 				user = User.objects.create_user(username, email, password)
-				#user.first_name, user.last_name = name, lastname
+				
 				if user:
 					login(request, user)
 				else:
@@ -61,7 +59,7 @@ def InscriptionView(request):
 	return render(request,'inscription.html', locals())
 
 
-@login_required(login_url='/connexion/')
+@login_required(login_url='/connexion')
 def ProfilView(request):
 	return render(request,'profil.html')
 
