@@ -1,20 +1,3 @@
-.banniereTitre{
-	margin-top: 75px;
-	background-color: #990000;
-	width: 60%;
-	height: 100px; 
-	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
-	border-radius: 10px;
-}
-
-.banniereMenu{
-	background-color: #990000;
-	width: 80%;
-	height: 75px;
-	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
-	border-radius: 10px;
-}
-
 h1{
 	font-size: 50px;
 	color: yellow;
@@ -35,7 +18,47 @@ h2{
 	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
 }
 
-a:hover {
+h3.title{
+	font-size: 25px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration:underline;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+a.linkClassic{
+	font-size: 20px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+a.linkButton{
+	color: yellow;
+	text-decoration: none;
+	font-size: 18px;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+
+	width: 100%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: #990000;
+	box-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
+}
+
+a.linkButton:hover {
+	color: white;
+	font-size: 18px;
+
+	background-color: red;
+	box-shadow: white 2px 2px 1px, white -2px 2px 1px, white -2px -2px 1px, white 2px -2px 1px;
+} 
+
+a.linkMenu:hover {
 	background-color: #660000;
 	transform:scale(1.1);
 } 
@@ -70,9 +93,6 @@ li a {
 	text-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
 } 
 
-
-
-
 body{
 	margin: auto;
 	padding: auto;
@@ -82,6 +102,43 @@ body{
 	background-size: cover;
 	background-image : url("https://images.alphacoders.com/239/239291.jpg");
 }
+
+.boxConnexion{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(99,0,0,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+.banniereTitre{
+	margin-top: 75px;
+	background-color: #990000;
+	width: 60%;
+	height: 100px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereMenu{
+	background-color: #990000;
+	width: 80%;
+	height: 75px;
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.textClassic{
+	font-size: 15px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
 /*
 site pour convertire couleur en hexadecimal :
 http://www.proftnj.com/RGB3.htm

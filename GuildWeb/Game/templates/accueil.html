@@ -3,18 +3,16 @@
 <html>
 	<head>
 		<meta charset="utf8"/>
-		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+
+		<!-- Chargement de feuille de style.cc -->
+		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+
 		<title>GW - Accueil</title>
 	</head>
 		
 	<body>
-		<center><div class="banniereTitre">
-			<center><h1>Guild Web</h1></center>
-		</div></center>
-		<br/>
-			<ul class="menu"> 	<li><a href="#home">Accueil</a></li>
-					<li><a href="http://mordor:3152/polls/inscription/">Inscription</a></li>
-					<li><a href="#contact">Contact</a></li>
-			</ul>
+		{% include "partieSpam.html" %}
 	</body>
 </html>
+
+

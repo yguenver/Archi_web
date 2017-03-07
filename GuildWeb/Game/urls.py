@@ -1,10 +1,15 @@
 from django.conf.urls import url
 from django.contrib import admin
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from . import views
 
 
 urlpatterns = [
+	url(r'^accueil', views.AccueilView, name='accueil'),
+
 	url(r'^connexion', views.ConnexionView, name='connexion'),
 	url(r'^inscription', views.InscriptionView, name='inscription'),
 	url(r'^deconnexion', views.deconnexion, name='deconnexion'),

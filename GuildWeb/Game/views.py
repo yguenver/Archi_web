@@ -4,6 +4,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
+from django.http import HttpResponse
+
 from django.utils import timezone
 
 from django.contrib.auth.models import User
@@ -12,6 +14,11 @@ from django.contrib.auth.decorators import login_required
 
 from .models import *
 from .forms import *
+
+
+
+def AccueilView(request):
+	return render(request,'accueil.html')
 
 def ConnexionView(request):
 	error = False
