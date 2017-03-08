@@ -1,0 +1,120 @@
+.banniereTitre{
+	margin-top: 75px;
+	background-color: #990000;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereMenu{
+	background-color: #990000;
+	width: 80%;
+	height: 75px;
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+h1{
+	font-size: 50px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration:underline;
+	text-align: center;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+h2{
+	font-size: 20px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration:underline;
+	text-align: center;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+a:hover {
+	background-color: #660000;
+	transform:scale(1.1);
+} 
+
+ul.menu {
+	list-style-type: none;
+	margin: auto; 
+	padding: auto; 
+	overflow: hidden; 
+	background-color: #990000; 
+	position: fixed; 
+	top: 0; 
+	width: 100%;
+	box-shadow:0px 5px 1px #666666;
+	border-radius: 0px;
+}
+
+li { 
+	float: left;
+} 
+
+li a {
+	transition: all .2s ease-int-out;
+	display: block;
+	padding: 16px;
+	font-size: 15px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration:none;
+	text-align: center;
+	text-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
+} 
+
+
+
+
+body{
+	margin: auto;
+	padding: auto;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	background-image : url("https://images.alphacoders.com/239/239291.jpg");
+}
+
+
+
+#myCanvas{
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+
+	outline:3px solid #d3d3d3;
+}
+
+
+.gameDiv{
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	background-color: rgba(99,0,0,0.8);s
+	border: 1px;
+	box-shadow: 2px 2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, -2px -2px 1px #000000;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+/*
+site pour convertire couleur en hexadecimal :
+http://www.proftnj.com/RGB3.htm
+liste des font pour body :
+https://images.alphacoders.com/239/239291.jpg
+http://img11.hostingpics.net/pics/397263Fond.png
+https://doc.x3dom.org/tutorials/basics/htmlCSS/pattern.png
+*/

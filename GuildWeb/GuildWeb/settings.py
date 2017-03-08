@@ -25,12 +25,15 @@ SECRET_KEY = 'h^)#vr91evcve!r!4dn+d9*o)&ma_h**vktd#xny6@h(z!350('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'mordor'
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+	'Game.apps.GameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
