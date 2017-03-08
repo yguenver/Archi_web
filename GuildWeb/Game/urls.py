@@ -9,6 +9,8 @@ from . import views
 
 urlpatterns = [
 	url(r'^accueil', views.AccueilView, name='accueil'),
+	url(r'^game', views.GameView, name='game'),
+	url(r'^contact', views.ContactView, name='contact'),
 
 	url(r'^connexion', views.ConnexionView, name='connexion'),
 	url(r'^inscription', views.InscriptionView, name='inscription'),

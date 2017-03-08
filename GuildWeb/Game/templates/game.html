@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta charset="utf8"/>
+
+		<!-- Chargement de feuille de style.cc -->		
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+		<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
+
+		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+		<title>GW - Game</title>
+	</head>
+	<body id="themeChange" classe="redTheme" onload="themeChange2()">
+		{% include "partieSpam.html" %}
+		
+		
+		
+	<center><input type="button" onclick="popup()" value="Click Me!"></center>
+	
+	
+	
+	<div class="gameDiv">
+		<canvas id="myCanvas" width="800px" height="600px">
+		</canvas>
+	</div>
+
+
+
+	</body>
+</html>

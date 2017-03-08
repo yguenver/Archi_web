@@ -19,6 +19,9 @@ from .forms import *
 
 def AccueilView(request):
 	return render(request,'accueil.html')
+	
+def GameView(request):
+	return render(request,'game.html')
 
 def ConnexionView(request):
 	error = False
@@ -67,6 +70,9 @@ def InscriptionView(request):
 
 	return render(request,'inscription.html', locals())
 
+
+def ContactView(request):
+	return render(request,'contact.html')
 
 @login_required(login_url='/connexion/')
 def ProfilView(request):

@@ -5,13 +5,22 @@
 		<meta charset="utf8"/>
 
 		<!-- Chargement de feuille de style.cc -->
-		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+		<link href="{% static '/css/style.css' %}" type="text/css" rel="stylesheet"/>
 
+		<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
+
+		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+		
 		<title>GW - Accueil</title>
 	</head>
 		
-	<body>
+	<body id="themeChange" class="redTheme" onload="themeChange2()">
 		{% include "partieSpam.html" %}
+		<div class="boxConnexion">
+			<h2> Bienvenue dans Guild Web </h2><br/>
+			<p class="textClassic"> Il s'agit là de notre projet de L3SPI <br/>Si vous ètes ici cest que vous avez réussi a pénétrer dans notre terrible site internet. Si c'est le cas, préparé votre Guilde et lancez la à l'assaut des Guildes des autres joueurs. Optimiser vos personnage et customiser les afin de remporter la victoire a coup sur !
+			</p>
+		</div>
 	</body>
 </html>
 

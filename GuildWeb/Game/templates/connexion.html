@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -11,10 +12,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+	<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
     <title>GW - Connexion</title>
 
 	<!-- Chargement de feuille de style.cc -->
 	<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+	<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +28,7 @@
 
 </head>
 
-  <body>
+  <body id="themeChange" class="redTheme" onload="themeChange2()">
 
 	<!-- interface basique -->
 	{% include "partieSpam.html" %}
@@ -33,10 +36,9 @@
     <div class="boxConnexion">
         <h3 class="title">Se Connecter</h3>
       
-		<form class=" col-lg-4 col-md-5 col-sm-6 col-xs-6" action="{% url 'connexion' %}" method="post">
-        	<div class="form-group">
-        		
-        		{% if error %}
+		<form action="{% url 'connexion' %}" method="post">
+			<div>
+       			{% if error %}
 					<p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
 	  			{% endif %}
         		{% if user.is_authenticated %}
@@ -46,17 +48,18 @@
         			<form action= ""  method="post">
     					{% csrf_token %}
     					{{ form.as_p }}
-   					 	<input type="submit" class="btn btn-default" value="Connexion" />
+   					 	<input class="linkButton" type="submit" value="Connexion" />
 					</form>
 				{% endif %}
- 			</div>
-  			<div class="form-group">
-  				<div class="checkbox">
-    				<label>
-      					<input type="checkbox"name="creer" id="creer"><label for="creer" class="textClassic"> Se souvenir de moi</label>
+			</div>
+
+  			<div>
+  				<div>
+    				<label class="labelClassic">
+      					<br/><input type="checkbox"name="creer" id="creer"><label class="labelClassic" for="creer" class="textClassic"> Se souvenir de moi</label>
     				</label>
   				</div>
-  			
+				
   				<br/><a href="{% url 'inscription' %}" class="linkButton" > Creer un compte</a>
 				<br/>
   			
