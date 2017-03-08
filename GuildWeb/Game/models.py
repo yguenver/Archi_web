@@ -14,3 +14,5 @@ class User(AbstractBaseUser):
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     objects = UserManager()
+    is_staff = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)

@@ -1,6 +1,6 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.views import generic
 
@@ -46,9 +46,9 @@ def InscriptionView(request):
 				error = True
 			else:
 				user = User.objects.create_user(username, email, password)
-				
-				if user:
+				if user is not None:
 					login(request, user)
+					#return redirect(reverse(ProfilView))
 				else:
 					error = True
 		else:
@@ -56,7 +56,7 @@ def InscriptionView(request):
 	else:
 		form = InscriptionForm()
 
-	return render(request,'inscription.html', locals())
+	return render(request,'inscription.html')
 
 
 @login_required(login_url='/connexion')
