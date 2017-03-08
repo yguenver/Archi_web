@@ -1,13 +1,29 @@
-
+{% load staticfiles %}
 <!DOCTYPE html>
 
 <html>
 	<head>
 		<title>lol</title>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
 	</head>
-	<body>
+	<body onload="popup();">
+		{% include "partieSpam.html" %}
+		
+		
+		
+		<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
 
-	<h1>lolololol</h1>
+
+	<center><input type="button" onclick="popup()" value="Click Me!"></center>
+	
+	
+	
+	<div class="gameDiv">
+		<canvas id="myCanvas" width="800px" height="600px">
+		</canvas>
+	</div>
+
+
 
 	</body>
 </html>
