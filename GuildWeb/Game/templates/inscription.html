@@ -1,22 +1,19 @@
 {% load staticfiles %}
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 
   <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
+		<!-- Chargement de feuille de style.cc et du js des themes-->
+		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
+	
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-	<!-- Chargement de feuille de style.cc -->
-	<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
-	<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
-
-	<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
-    <title>GW - inscription</title>
+		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+		<title>GW - inscription</title>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,13 +22,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+	</head>
 
-  <body id="themeChange" class="redTheme" onload="themeChange2()">
+  <body id="themeChange" class="redTheme" onload="loadTheme();">
 
 	{% include "partieSpam.html" %}
 
-   <div class="boxConnexion">
+   <div id="boxConnexion" class="boxConnexionRed">
         <h3 class="title">Creer un Compte</h3>
 
       

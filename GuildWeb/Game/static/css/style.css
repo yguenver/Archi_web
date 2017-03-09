@@ -63,11 +63,38 @@ a.linkClassic{
 }
 
 a.linkMenu:hover {
-	background-color: #660000;
+	/*background-color: #660000;*/
+	background-color: rgba(0,0,0,0.3);
 	transform:scale(1.1);
 } 
 
-ul.menu {
+ul.menuBlue{
+	list-style-type: none;
+	margin: auto; 
+	padding: auto; 
+	overflow: hidden; 
+	background-color: lightblue; 
+	position: fixed; 
+	top: 0; 
+	width: 100%;
+	box-shadow:0px 5px 1px #666666;
+	border-radius: 0px;
+}
+
+ul.menuGreen{
+	list-style-type: none;
+	margin: auto; 
+	padding: auto; 
+	overflow: hidden; 
+	background-color: green; 
+	position: fixed; 
+	top: 0; 
+	width: 100%;
+	box-shadow:0px 5px 1px #666666;
+	border-radius: 0px;
+}
+
+ul.menuRed{
 	list-style-type: none;
 	margin: auto; 
 	padding: auto; 
@@ -134,7 +161,29 @@ body.redTheme{
 
 }
 
-.boxConnexion{
+.boxConnexionBlue{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(173,216,230,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+.boxConnexionGreen{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(0,128,0,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+.boxConnexionRed{
 	margin-left: 25%;
 	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
 	width: 50%;
@@ -145,7 +194,31 @@ body.redTheme{
 	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
 }
 
-.banniereTitre{
+/*couleur RGB:
+	#990000 = 99,0,0
+	green = 0,128,0
+	lightblue = 173,216,230
+	*/
+
+.banniereTitreBlue{
+	margin-top: 75px;
+	background-color: lightblue;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereTitreGreen{
+	margin-top: 75px;
+	background-color: green;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereTitreRed{
 	margin-top: 75px;
 	background-color: #990000;
 	width: 60%;

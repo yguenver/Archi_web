@@ -1,32 +1,40 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 
-<html>
-	<head>
-	<meta charset="utf8"/>
+<html lang="fr">
 
-		<!-- Chargement de feuille de style.cc -->		
-		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
-		<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
-		<title>GW - Game</title>
-	</head>
-	<body id="themeChange" classe="redTheme" onload="themeChange2()">
+	<!-- Chargement de feuille de style.cc -->
+	<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+	<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
+
+	<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+    <title>GW - Game</title>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+	<body id="themeChange" class="redTheme" onload="loadTheme();">
 		{% include "partieSpam.html" %}
 		
 		
 		
-	<center><input type="button" onclick="popup()" value="Click Me!"></center>
+		<center><input type="button" onclick="popup()" value="Click Me!"></center>
 	
-	
-	
-	<div class="gameDiv">
-		<canvas id="myCanvas" width="800px" height="600px">
-		</canvas>
-	</div>
-
-
+		<div class="gameDiv">
+			<canvas id="myCanvas" width="800px" height="600px">
+			</canvas>
+		</div>
 
 	</body>
 </html>

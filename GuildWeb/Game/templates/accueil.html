@@ -1,22 +1,33 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf8"/>
 
-		<!-- Chargement de feuille de style.cc -->
-		<link href="{% static '/css/style.css' %}" type="text/css" rel="stylesheet"/>
+<html lang="fr">
 
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Chargement de feuille de style.cc et du js des themes-->
+		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
 		<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
+	
 
 		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
-		
 		<title>GW - Accueil</title>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 	</head>
 		
-	<body id="themeChange" class="redTheme" onload="themeChange2()">
+	<body id="themeChange" class="redTheme" onload="loadTheme();">
 		{% include "partieSpam.html" %}
-		<div class="boxConnexion">
+		<div id="boxConnexion" class="boxConnexionRed">
 			<h2> Bienvenue dans Guild Web </h2><br/>
 			<p class="textClassic"> Il s'agit là de notre projet de L3SPI <br/>Si vous ètes ici cest que vous avez réussi a pénétrer dans notre terrible site internet. Si c'est le cas, préparé votre Guilde et lancez la à l'assaut des Guildes des autres joueurs. Optimiser vos personnage et customiser les afin de remporter la victoire a coup sur !
 			</p>

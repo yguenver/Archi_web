@@ -3,37 +3,33 @@
 
 <html lang="fr">
 
-<head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
+		<!-- Chargement de feuille de style.cc -->
+		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="{% static '/js/plankton.js' %}"></script>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+		<title>GW - Connexion</title>
 
-	<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
-    <title>GW - Connexion</title>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-	<!-- Chargement de feuille de style.cc -->
-	<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
-	<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
+	</head>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-  <body id="themeChange" class="redTheme" onload="themeChange2()">
+	<body id="themeChange" class="redTheme" onload="loadTheme();">
 
 	<!-- interface basique -->
 	{% include "partieSpam.html" %}
 
-    <div class="boxConnexion">
+    <div id="boxConnexion" class="boxConnexionRed">
         <h3 class="title">Se Connecter</h3>
       
 		<form action="{% url 'connexion' %}" method="post">

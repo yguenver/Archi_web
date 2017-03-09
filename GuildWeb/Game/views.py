@@ -16,7 +16,6 @@ from .models import *
 from .forms import *
 
 
-
 def AccueilView(request):
 	return render(request,'accueil.html')
 	
