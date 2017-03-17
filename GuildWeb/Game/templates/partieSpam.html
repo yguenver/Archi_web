@@ -18,8 +18,8 @@
 	<li><a class="linkMenu" href="{% url 'contact' %}">Contact</a></li>
 	<li><a class="linkMenu" href="" onclick="themeChange();">Changer Theme</a></li>
 	{% if user.is_authenticated %}
-		<p  class="textClassic" style="text-align: center ;"> Vous ètes connecté !</p>
+		<p  class="textClassic" style="text-align: center ;"> Vous etes connecte {{ user.username }} !</p>
 	{% else %}
-		<p  class="textClassic" style="text-align: center ;"> Vous n'ètes pas connecté...</p>
+		<p  class="textClassic" style="text-align: center ;"> Vous n'etes pas connecte...</p>
 	{% endif %}
 </ul>
