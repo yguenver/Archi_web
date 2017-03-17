@@ -38,15 +38,17 @@
 					<p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
 	  			{% endif %}
         		{% if user.is_authenticated %}
-					Vous êtes connecté, {{ user.username }} !
+					<p class="textClassic">Bonjour {{ user.username }}, Comment allez vous aujourd'hui ? <br/>
+					<br/>Losque je serais implémenté si mes feignasses de dev se motive, je vous annoncerez les dernières nouvelles du sites Guild Web
+					en attendant, je vous souhaite de passé une agréable visite !</p>
 				{% else %}
         			<form action= ""  method="post">
     					{% csrf_token %}
     					{{ form.as_p }}
    					 	<input class="linkButton" type="submit" value="Connexion" />
 					</form>
-				{% endif %}
-			</div>
+				
+
 
   			<div>
   				<div>
@@ -57,7 +59,8 @@
 				
   				<br/><a href="{% url 'inscription' %}" class="linkButton" > Creer un compte</a>
 				<br/>
-  			
+  				{% endif %}
+
 			</div>
         </form>
       

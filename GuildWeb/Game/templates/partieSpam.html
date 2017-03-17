@@ -8,14 +8,18 @@
 <br/>
 <ul id="menu" class="menuRed">
 	<li><a class="linkMenu" href="{% url 'accueil' %}">Accueil</a></li>
-	<li><a class="linkMenu" href="{% url 'game' %}">Game</a></li>
 	{% if user.is_authenticated %}
-		<li><a class="linkMenu" href="{% url 'connexion' %}">Deconnexion</a></li>
-		<li><a class="linkMenu" href="">Mon Profil</a></li>
+		<li><a class="linkMenu" href="{% url 'deconnexion' %}">Deconnection</a></li>
+		<li><a class="linkMenu" href="{% url 'game' %}">Jeu</a></li>
 	{% else %}
-    	<li><a class="linkMenu" href="{% url 'connexion' %}">Connexion</a></li>
+    	<li><a class="linkMenu" href="{% url 'connexion' %}">Connection</a></li>
 		<li><a class="linkMenu" href="{% url 'inscription' %}">Inscription</a></li>
 	{% endif %}
 	<li><a class="linkMenu" href="{% url 'contact' %}">Contact</a></li>
 	<li><a class="linkMenu" href="" onclick="themeChange();">Changer Theme</a></li>
+	{% if user.is_authenticated %}
+		<p  class="textClassic" style="text-align: center ;"> Vous ètes connecté !</p>
+	{% else %}
+		<p  class="textClassic" style="text-align: center ;"> Vous n'ètes pas connecté...</p>
+	{% endif %}
 </ul>

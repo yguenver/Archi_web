@@ -15,7 +15,7 @@ h2{
 	font-weight: bold;
 	text-decoration:underline;
 	text-align: center;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 }
 
 h3.title{
@@ -37,7 +37,7 @@ label{
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
 	text-decoration: none;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 }
 
 label.labelClassic{
@@ -50,7 +50,7 @@ label.labelClassic{
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
 	text-decoration: none;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 }
 
 a.linkClassic{
@@ -59,7 +59,7 @@ a.linkClassic{
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
 	text-decoration: none;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 }
 
 a.linkMenu:hover {
@@ -121,7 +121,7 @@ li a {
 	font-weight: bold;
 	text-decoration:none;
 	text-align: center;
-	text-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 } 
 
 body.greenTheme{
@@ -242,7 +242,7 @@ body.redTheme{
 }
 
 .textClassic{
-	font-size: 15px;
+	font-size: 18px;
 	color: yellow;
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
@@ -254,7 +254,7 @@ body.redTheme{
 	text-decoration: none;
 	font-size: 16px;
 	font-family: Comic Sans MS, Times New Roman; 
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 
 	width: 30%;
 	height: auto;
@@ -271,6 +271,9 @@ body.redTheme{
 	background-color: red;
 	box-shadow: white 2px 2px 1px, white -2px 2px 1px, white -2px -2px 1px, white 2px -2px 1px;
 } 
+
+
+/* Ajouter le CSS de la page de jeu ici */
 
 #myCanvas{
 	margin-top: 30px;

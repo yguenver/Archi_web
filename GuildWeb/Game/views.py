@@ -1,7 +1,7 @@
 
 from django.contrib.auth import authenticate, login, logout
 from django.views import generic
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
@@ -16,7 +16,8 @@ from .forms import ConnexionForm, InscriptionForm
 
 def AccueilView(request):
 	return render(request,'accueil.html')
-	
+
+@login_required(login_url='/connexion')
 def GameView(request):
 	return render(request,'game.html')
 
