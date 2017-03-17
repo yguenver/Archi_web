@@ -24,7 +24,7 @@ h3.title{
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
 	text-decoration:underline;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;;
 }
 
 label{
@@ -246,7 +246,7 @@ body.redTheme{
 	color: yellow;
 	font-family: Comic Sans MS, Times New Roman; 
 	font-weight: bold;
-	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
 }
 
 .linkButton{
@@ -290,15 +290,3 @@ body.redTheme{
 	box-shadow: 2px 2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, -2px -2px 1px #000000;
 	border-radius: 10px;
 }
-
-/*
-site pour convertire couleur en hexadecimal :
-http://www.proftnj.com/RGB3.htm
-
-liste des font pour body :
-https://images.alphacoders.com/239/239291.jpg
-http://wallup.net/wp-content/uploads/2016/04/10/318962-Monster_Hunter-heroic_fantasy-dragon-snow.png
-https://images.alphacoders.com/239/239291.jpg
-http://img11.hostingpics.net/pics/397263Fond.png
-https://doc.x3dom.org/tutorials/basics/htmlCSS/pattern.png
-*/

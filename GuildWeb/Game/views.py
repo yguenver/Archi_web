@@ -1,16 +1,13 @@
-from django.shortcuts import get_object_or_404, render
-from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from django.views import generic
-
-from django.http import HttpResponse
-
-from django.utils import timezone
-
-from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.views import generic
+from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
+from django.urls import reverse
+from django.utils import timezone
+from django.contrib.auth.models import User
 
 from .models import *
 from .forms import *

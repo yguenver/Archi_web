@@ -1,4 +1,3 @@
-
 <center>
 	<div id="banniereTitre" class="banniereTitreRed">
 		<center>
@@ -10,6 +9,13 @@
 <ul id="menu" class="menuRed">
 	<li><a class="linkMenu" href="{% url 'accueil' %}">Accueil</a></li>
 	<li><a class="linkMenu" href="{% url 'game' %}">Game</a></li>
+	{% if user.is_authenticated %}
+		<li><a class="linkMenu" href="{% url 'connexion' %}">Deconnexion</a></li>
+		<li><a class="linkMenu" href="{% url 'inscription' %}">Mon Profil</a></li>
+	{% else %}
+    	<li><a class="linkMenu" href="{% url 'connexion' %}">Connexion</a></li>
+		<li><a class="linkMenu" href="{% url 'inscription' %}">Inscription</a></li>
+	{% endif %}
 	<li><a class="linkMenu" href="{% url 'connexion' %}">Connexion</a></li>
 	<li><a class="linkMenu" href="{% url 'inscription' %}">Inscription</a></li>
 	<li><a class="linkMenu" href="{% url 'contact' %}">Contact</a></li>
