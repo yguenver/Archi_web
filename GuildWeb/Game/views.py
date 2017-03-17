@@ -1,3 +1,4 @@
+
 from django.contrib.auth import authenticate, login, logout
 from django.views import generic
 from django.shortcuts import get_object_or_404, render
@@ -5,12 +6,12 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-from .models import *
-from .forms import *
+from .forms import ConnexionForm, InscriptionForm
 
 
 def AccueilView(request):
@@ -28,9 +29,10 @@ def ConnexionView(request):
 			name = form.cleaned_data["username"]
 			passw = form.cleaned_data["password"]
 			user = authenticate(username=name, password=passw)  # Nous vérifions si les données sont correctes
+			print(user)
 			if user is not None:
 				login(request, user)  # nous connectons l'utilisateur
-				return redirect(reverse(ProfilView))
+				return redirect(reverse(ConnexionView))
 			else: # sinon une erreur sera affichée
 				error = True
 	else:
@@ -44,19 +46,22 @@ def InscriptionView(request):
 	if request.method == "POST":
 		form = InscriptionForm(request.POST)
 		if form.is_valid():
-			username = form.cleaned_data["pseudo"]
-			#name = form.cleaned_data["prenom"]
-			#lastname = form.cleaned_data["nom"]
+			name = form.cleaned_data["pseudo"]
 			email = form.cleaned_data["email"]
-			password = form.cleaned_data["password"]
+			passw = form.cleaned_data["password"]
 			passwordconf = form.cleaned_data["passwordconf"]
-			if password != passwordconf:
+			if passw != passwordconf:
 				error = True
 			else:
-				user = User.objects.create_user(username, email, password)
-				#user.first_name, user.last_name = name, lastname
-				if user:
+				user = User.objects.create_user(name, email, passw)
+				
+				if user is not None:
+					user.save()
+					print(user)
+					user = authenticate(username=name, password=passw)
+					print(user)
 					login(request, user)
+					return redirect(reverse(ConnexionView))
 				else:
 					error = True
 		else:
@@ -64,13 +69,14 @@ def InscriptionView(request):
 	else:
 		form = InscriptionForm()
 
-	return render(request,'inscription.html', locals())
+	return render(request,'inscription.html', {'form' : form})
+
 
 
 def ContactView(request):
 	return render(request,'contact.html')
 
-@login_required(login_url='/connexion/')
+@login_required(login_url='/connexion')
 def ProfilView(request):
 	return render(request,'profil.html')
 

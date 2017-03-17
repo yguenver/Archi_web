@@ -39,7 +39,6 @@
 	  			{% endif %}
         		{% if user.is_authenticated %}
 					Vous êtes connecté, {{ user.username }} !
-					
 				{% else %}
         			<form action= ""  method="post">
     					{% csrf_token %}

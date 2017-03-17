@@ -10,3 +10,4 @@ class InscriptionForm(forms.Form):
     email = forms.EmailField(label="E-mail ", initial="", widget=forms.EmailInput(attrs={'placeholder':'E-mail'}))
     password = forms.CharField(label="Password ", initial="", widget=forms.PasswordInput(attrs={'placeholder':'Password'}))
     passwordconf = forms.CharField(label="Confirm ", initial="", widget=forms.PasswordInput(attrs={'placeholder':'Confirm'}))
+
