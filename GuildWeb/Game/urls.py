@@ -7,5 +7,5 @@ app_name = 'Game'
 urlpatterns = [
 
 	#ex: /Game/
-	url(r'^index/', views.index, name='index'),
+	url(r'^GamePage/', views.GameView, name='index'),
 ]

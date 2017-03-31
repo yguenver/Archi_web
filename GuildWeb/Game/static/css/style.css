@@ -96,17 +96,33 @@ body{
 
 
 .gameDiv{
+	padding: auto;
 	margin-left: auto;
 	margin-right: auto;
 	width: 900px;
-	background-color: rgba(99,0,0,0.8);s
+	background-color: rgba(99,0,0,0.8);
 	border: 1px;
 	box-shadow: 2px 2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, -2px -2px 1px #000000;
 	border-radius: 10px;
 }
 
 
-
+#plan1{
+    background-color: #ffffff;
+    width: 900px;
+    height: 636px;
+    margin-left: 325px;
+    position: absolute;
+    z-index:0;
+}
+#plan2{
+    background-color: #ffffff;
+    width: 900px;
+    height: 636px;
+    margin-left: 325px;
+    position: relative;
+    z-index:1;
+}
 
 
 

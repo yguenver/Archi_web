@@ -9,20 +9,15 @@
 	<body onload="popup();">
 		{% include "partieSpam.html" %}
 		
-		
+		{{user.username}}
 		
 		<script type="text/javascript" src="{% static '/js/Game.js' %}"></script>
 
 
-	<center><input type="button" onclick="popup()" value="Click Me!"></center>
-	
-	
-	
-	<div class="gameDiv">
-		<canvas id="myCanvas" width="800px" height="600px">
-		</canvas>
-	</div>
 
+	<div class="gameDiv" id="labonnediv">
+		You are in {{compte.region_in_world}}.
+	</div>
 
 
 	</body>
