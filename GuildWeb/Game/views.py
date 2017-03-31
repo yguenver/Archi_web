@@ -27,3 +27,16 @@ def GameView(request):
 	#context['current_user_id'] = current_user_id
 	return render(request, 'index.html', {'user': usr, 'compte': cpt})
     #return HttpResponse("Hello, world. You're at the Game index.")
+
+
+def MsgView(request):
+
+	if request.method == "POST":
+		if request.POST['submit'] == "Reception":
+			return render(request, 'Messages.html', {'mode': "R"})
+		if request.POST['submit'] == "Nouveau message":
+			return render(request, 'Messages.html', {'mode': "S"})
+		if request.POST['submit'] == "Envoyer":
+		
+		#ecrire le formulaire
+			return render(request, 'Messages.html', {'mode': "R"})

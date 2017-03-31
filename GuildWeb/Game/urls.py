@@ -8,4 +8,5 @@ urlpatterns = [
 
 	#ex: /Game/
 	url(r'^GamePage/', views.GameView, name='index'),
+	url(r'^GamePage/Messages', views.MsgView, name='index'),
 ]

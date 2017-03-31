@@ -29,4 +29,11 @@ class Compte(models.Model):
 	goutte = models.IntegerField(default=0)
 	cendres = models.IntegerField(default=0)
 	talisman = models.IntegerField(default=0)
+	
 
+class Msg(models.Model):
+	sender = models.ForeignKey(User, related_name='sender', on_delete=models.CASCADE, primary_key=True,)
+	receiver = models.ForeignKey(User, related_name='receiver', on_delete=models.CASCADE, primary_key=True,)
+	objet = models.CharField(u'objet', max_length=50)
+	text = models.CharField(u'text', max_length=255)
+	date = models.DateField()
