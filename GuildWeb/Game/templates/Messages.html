@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Chargement de feuille de style.cc et du js des themes-->
+		<link href="../static/css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="{% static '/js/theme.js' %}"></script>
+	
+
+		<link rel="icon" type="image/png" href="http://www.hereisfree.com/content1//imguploads/Image/cjbc/zcool/20080827/1219850670.jpg"/>
+		<title>GW - Accueil</title>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		
+	</head>
+
+
+	<body id="themeChange" class="redTheme" onload="loadTheme();">
+		{% include "partieSpam.html" %}
+		{% include "menuSpam.html" %}
+		
+		
+		
+	
+		<ul id="menu" class="menuRed">
+			<li><a class="linkMenu" href="{% url 'accueil' %}">Accueil</a></li>
+			<li><a class="linkMenu" href="{% url 'game' %}">Game</a></li>
+			{% if user.is_authenticated %}
+				<li><a class="linkMenu" href="{% url 'connexion' %}">Deconnexion</a></li>
+				<li><a class="linkMenu" href="">Mon Profil</a></li>
+			{% else %}
+				<li><a class="linkMenu" href="{% url 'connexion' %}">Connexion</a></li>
+				<li><a class="linkMenu" href="{% url 'inscription' %}">Inscription</a></li>
+			{% endif %}
+			<li><a class="linkMenu" href="{% url 'contact' %}">Contact</a></li>
+			<li><a class="linkMenu" href="" onclick="themeChange();">Changer Theme</a></li>
+		</ul>
+
+
+		
+		
+		
+		
+		
+		
+
+
+		<div class="gameDiv">
+				<ul class="gameMenu">
+					<li><a class="linkGameMenu" href="http://mordor:3152/Game/accueil.html">Principal</a></li>
+					<li><a class="linkGameMenu" href="http://mordor:3152/Game/connexion.html">Messages</a></li>
+					<li><a class="linkGameMenu" href="http://mordor:3152/Game/inscription.html">autres</a></li>
+					<li><a class="linkGameMenu" href="#contact">why ? ...</a></li>
+				</ul>
+				
+				
+			<br>
+			<div class="msgDiv">
+				<form>
+					<input type="button" name="S" value="Nouveau message">
+					<input type="button" name="R" value="Boite reception">
+				</form>
+
+
+				{% if mode = "R" %}
+					#formulaire
+				{% endif %}
+
+				{% if mode = "S" %}
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Envoyer"/>
+				{% endif %}
+			</div>
+		</div>
+		
+		
+	</body>
+
+
+
+
+
+
+	

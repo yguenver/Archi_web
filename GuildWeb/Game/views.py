@@ -32,11 +32,26 @@ def GameView(request):
 def MsgView(request):
 
 	if request.method == "POST":
+		form = MessageForm(request.POST)
 		if request.POST['submit'] == "Reception":
 			return render(request, 'Messages.html', {'mode': "R"})
 		if request.POST['submit'] == "Nouveau message":
 			return render(request, 'Messages.html', {'mode': "S"})
 		if request.POST['submit'] == "Envoyer":
-		
-		#ecrire le formulaire
-			return render(request, 'Messages.html', {'mode': "R"})
+			try:
+				dest = User.objects.get(username=request.POST['destinataire'])
+			except User.DoesNotExist:
+				dest = None
+			
+			if dest != None
+				sender = request.user
+				
+				msg = Msg.objects.create_msg(sender, dest, request.POST['objet'], request.POST['message'])
+				#msg.save()
+				print (msg)
+				return render(request, 'Messages.html', {'mode': "R"})
+			else:
+				#msg erreur destina
+				
+				
+	return render(request, 'Messages.html', {'form': form})

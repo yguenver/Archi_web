@@ -1,20 +1,3 @@
-.banniereTitre{
-	margin-top: 75px;
-	background-color: #990000;
-	width: 60%;
-	height: 80px; 
-	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
-	border-radius: 10px;
-}
-
-.banniereMenu{
-	background-color: #990000;
-	width: 80%;
-	height: 75px;
-	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
-	border-radius: 10px;
-}
-
 h1{
 	font-size: 50px;
 	color: yellow;
@@ -35,12 +18,83 @@ h2{
 	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
 }
 
-a:hover {
-	background-color: #660000;
+h3.title{
+	font-size: 25px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration:underline;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;;
+}
+
+label{
+	display: block;
+	width: 25%;
+	float: left;
+	
+	font-size: 15px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+label.labelClassic{
+	display: inline;
+	width: 50%;
+	float: none;
+
+	font-size: 15px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+a.linkClassic{
+	font-size: 20px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+}
+
+a.linkMenu:hover {
+	/*background-color: #660000;*/
+	background-color: rgba(0,0,0,0.3);
 	transform:scale(1.1);
 } 
 
-ul.menu {
+ul.menuBlue{
+	list-style-type: none;
+	margin: auto; 
+	padding: auto; 
+	overflow: hidden; 
+	background-color: lightblue; 
+	position: fixed; 
+	top: 0; 
+	width: 100%;
+	box-shadow:0px 5px 1px #666666;
+	border-radius: 0px;
+}
+
+ul.menuGreen{
+	list-style-type: none;
+	margin: auto; 
+	padding: auto; 
+	overflow: hidden; 
+	background-color: green; 
+	position: fixed; 
+	top: 0; 
+	width: 100%;
+	box-shadow:0px 5px 1px #666666;
+	border-radius: 0px;
+}
+
+ul.menuRed{
 	list-style-type: none;
 	margin: auto; 
 	padding: auto; 
@@ -51,6 +105,18 @@ ul.menu {
 	width: 100%;
 	box-shadow:0px 5px 1px #666666;
 	border-radius: 0px;
+	z-index: 1;
+}
+
+ul.gameMenu{
+	position: relative;
+	margin-top: 0px;
+	float:left;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 100%;
+	background: #090909;
 }
 
 li { 
@@ -70,20 +136,147 @@ li a {
 	text-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
 } 
 
-
-
-
-body{
+body.greenTheme{
 	margin: auto;
 	padding: auto;
 	background-attachment: fixed;
 	background-repeat: repeat;
 	background-position: center;
 	background-size: cover;
-	background-image : url("https://images.alphacoders.com/239/239291.jpg");
+	background-image : url("https://s-media-cache-ak0.pinimg.com/originals/9b/30/fa/9b30fa787f27822f6d009562d6f3088d.png");
 }
 
+body.blueTheme{
+	margin: auto;
+	padding: auto;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	background-image : url("http://wallup.net/wp-content/uploads/2016/04/10/318962-Monster_Hunter-heroic_fantasy-dragon-snow.png");
+}
 
+body.redTheme{
+	margin: auto;
+	padding: auto;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	background-image : url("http://cdn.wallpapersafari.com/36/87/ucHZ6q.jpg");
+	
+	/* fond d'écran RGB :
+	http://cdn.wallpapersafari.com/36/87/ucHZ6q.jpg
+	https://s-media-cache-ak0.pinimg.com/originals/9b/30/fa/9b30fa787f27822f6d009562d6f3088d.png
+	http://wallup.net/wp-content/uploads/2016/04/10/318962-Monster_Hunter-heroic_fantasy-dragon-snow.png
+	*/
+
+}
+
+.boxConnexionBlue{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(173,216,230,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+.boxConnexionGreen{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(0,128,0,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+.boxConnexionRed{
+	margin-left: 25%;
+	padding: 5px 0px 10px 20px;  /*order : top right bottom left*/
+	width: 50%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: rgba(99,0,0,0.8);
+	box-shadow: 1px 1px 2px black, -1px 1px 2px black, 1px -1px 2px black, -1px -1px 2px black;
+}
+
+/*couleur RGB:
+	#990000 = 99,0,0
+	green = 0,128,0
+	lightblue = 173,216,230
+	*/
+
+.banniereTitreBlue{
+	margin-top: 75px;
+	background-color: lightblue;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereTitreGreen{
+	margin-top: 75px;
+	background-color: green;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereTitreRed{
+	margin-top: 75px;
+	background-color: #990000;
+	width: 60%;
+	height: 80px; 
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.banniereMenu{
+	background-color: #990000;
+	width: 80%;
+	height: 75px;
+	box-shadow: 5px 5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000, -5px -5px 10px #000000;
+	border-radius: 10px;
+}
+
+.textClassic{
+	font-size: 15px;
+	color: yellow;
+	font-family: Comic Sans MS, Times New Roman; 
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000;
+}
+
+.linkButton{
+	color: yellow;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Comic Sans MS, Times New Roman; 
+	text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px, #000000 2px -2px;
+
+	width: 30%;
+	height: auto;
+	border: 1px;
+	border-radius: 10px;
+	background-color: #990000;
+	box-shadow: #000000 2px 2px 1px, #000000 -2px 2px 1px, #000000 -2px -2px 1px, #000000 2px -2px 1px;
+}
+
+.linkButton:hover {
+	color: white;
+	font-size: 16px;
+
+	background-color: red;
+	box-shadow: white 2px 2px 1px, white -2px 2px 1px, white -2px -2px 1px, white 2px -2px 1px;
+} 
 
 #myCanvas{
 	margin-top: 30px;
@@ -94,43 +287,28 @@ body{
 	outline:3px solid #d3d3d3;
 }
 
-
 .gameDiv{
-	padding: auto;
+	margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 900px;
-	background-color: rgba(99,0,0,0.8);
+	height: 500px;
+	background-color: rgba(99,0,0,0.8);s
+	border: 1px;
+	box-shadow: 2px 2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, -2px -2px 1px #000000;
+	border-radius: 10px;
+}
+
+.msgDiv{
+	margin-top: 50px;
+	margin-left: 250px;
+	width: 600px;
+	background-color: rgba(99,0,0,0.8);s
 	border: 1px;
 	box-shadow: 2px 2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, -2px -2px 1px #000000;
 	border-radius: 10px;
 }
 
 
-#plan1{
-    background-color: #ffffff;
-    width: 900px;
-    height: 636px;
-    margin-left: 325px;
-    position: absolute;
-    z-index:0;
-}
-#plan2{
-    background-color: #ffffff;
-    width: 900px;
-    height: 636px;
-    margin-left: 325px;
-    position: relative;
-    z-index:1;
-}
 
 
-
-/*
-site pour convertire couleur en hexadecimal :
-http://www.proftnj.com/RGB3.htm
-liste des font pour body :
-https://images.alphacoders.com/239/239291.jpg
-http://img11.hostingpics.net/pics/397263Fond.png
-https://doc.x3dom.org/tutorials/basics/htmlCSS/pattern.png
-*/
