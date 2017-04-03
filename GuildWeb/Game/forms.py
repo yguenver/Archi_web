@@ -11,3 +11,8 @@ class InscriptionForm(forms.Form):
     password = forms.CharField(label="Password ", initial="", widget=forms.PasswordInput(attrs={'placeholder':'Password'}))
     passwordconf = forms.CharField(label="Confirm ", initial="", widget=forms.PasswordInput(attrs={'placeholder':'Confirm'}))
 
+	
+class MessageForm(forms.Form):
+	dest = forms.CharField(label="Objet ", initial="", max_length=50, widget=forms.TextInput(attrs={'placeholder':'destinataire'}))
+	objet = forms.CharField(label="Objet ", initial="", max_length=50, widget=forms.TextInput(attrs={'placeholder':'Objet'}))
+	messages = forms.CharField(label="message ", initial="", max_length=30, widget=forms.TextInput(attrs={'placeholder':'message'}))

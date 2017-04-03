@@ -20,4 +20,6 @@ urlpatterns = [
 	url(r'^chat', views.ChatView, name='chat'),
 	url(r'^amis', views.AmisView, name='amis'),
 	url(r'^evenement', views.EvenementView, name='evenement'),
+	
+	url(r'^message', views.MsgView, name='message'),
 ]

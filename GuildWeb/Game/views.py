@@ -6,12 +6,14 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+from django.shortcuts import redirect
 
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
+from .models import Compte, Msg
 
-from .forms import ConnexionForm, InscriptionForm
+from .forms import ConnexionForm, InscriptionForm, MessageForm
 
 
 def AccueilView(request):
@@ -53,10 +55,15 @@ def InscriptionView(request):
 			if passw != passwordconf:
 				error = True
 			else:
-				user = User.objects.create_user(name, email, passw)
+				try:
+					user = User.objects.create_user(name, email, passw)
+				except:
+					return render(request,'inscription.html', {'form' : form})
 				
 				if user is not None:
 					user.save()
+					useraccount = Compte.objects.create(user=user)
+					useraccount.save()
 					print(user)
 					user = authenticate(username=name, password=passw)
 					print(user)
@@ -72,6 +79,52 @@ def InscriptionView(request):
 	return render(request,'inscription.html', {'form' : form})
 
 
+	
+def MsgView(request):
+
+	if request.method == "POST":
+		form = MessageForm(request.POST)
+		if request.POST['mode'] == "Boite reception":
+			try:
+				recu = Msg.objects.get(receiver=request.user.username)
+				print(recu)
+			except:
+				recu = None
+			print(recu)
+			return render(request, 'Messages.html', {'mode': "R"}, {'msgrecu': recu})
+		if request.POST['mode'] == "Nouveau message":
+			return render(request, 'Messages.html', {'mode': "S"}, {'form' : form})
+		if request.POST['mode'] == "Envoyer":
+			try:
+				dest = User.objects.get(username=request.POST['destinataire'])
+			except User.DoesNotExist:
+				dest = None
+			
+			if dest != None:				
+				print(dest)
+				print(request.user)
+				print(request.POST['objet'])
+				print(request.POST['message'])
+				msg = Msg.objects.create(sender=request.user.username, receiver=dest.username, objet=request.POST['objet'], text=request.POST['message'])
+				msg.save()
+				print (msg)
+				return render(request, 'Messages.html', {'mode': "R"})
+			else:
+				try:
+					recu = Msg.objects.get(receiver=request.user)
+				except:
+					recu = None
+				return render(request, 'Messages.html', {'mode': "R"}, {'msgrecu': recu})
+				#msg erreur destina
+	else:
+		try:
+			recu = Msg.objects.get(receiver=request.user)
+		except:
+			recu = None
+		return render(request, 'Messages.html', {'mode': "R"}, {'msgrecu': recu})
+
+	
+	
 
 def ContactView(request):
 	return render(request,'contact.html')

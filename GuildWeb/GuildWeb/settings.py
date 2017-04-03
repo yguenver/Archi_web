@@ -26,7 +26,8 @@ SECRET_KEY = 'h^)#vr91evcve!r!4dn+d9*o)&ma_h**vktd#xny6@h(z!350('
 DEBUG = True
 
 ALLOWED_HOSTS = [
-	'mordor'
+	'mordor',
+	'127.0.0.1'
 ]
 
 
